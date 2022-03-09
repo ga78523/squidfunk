@@ -4,7 +4,7 @@
 
 
 
-![Capture d’écran 2021-11-22 à 23.10.07](/Users/ericgaland/Documents/Capture%20d%E2%80%99e%CC%81cran%202021-11-22%20a%CC%80%2023.10.07.png)
+![Capture d’écran 2021-11-22 à 23.10.07](Capture%20d%E2%80%99e%CC%81cran%202021-11-22%20a%CC%80%2023.10.07.png)
 
 ### II ] Accès à la base de données
 
@@ -70,8 +70,6 @@ $reponse->closeCursor();
 
 ?>
 ```
-
-
 
 <u>Remarque</u> : il faut enregistrer le fichier PHP sous htdocs.
 

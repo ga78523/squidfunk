@@ -1,5 +1,18 @@
-site_name: Mon site
+site_name: MkLorum
+site_url: https://example.com/
+locale: fr
 
-theme:
-    name: material
+nav:
+    - Home: index.md
+    - About: about.md 
+    - SL: /SL/Balistique
+    - TNSI: TNSI/API_web_eleve.md
+
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+
+
   
