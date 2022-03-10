@@ -1,4 +1,4 @@
-# Balistique
+# <div align="center">Balistique</div>
 
 ## 1] Contexte
 
@@ -37,41 +37,38 @@ L’équation obtenue est celle d’une fonction dite "trinôme du second degré
 
 4. Tracé sur GeoGebra  
    
-   (a) Créer une constante $g = 9,81 m.s^{-2}$ en entrant simplement cette égalité dans la ligne de saisie ;  
+      a. Créer une constante $g = 9,81 m.s^{-2}$ en entrant simplement cette égalité dans la ligne de saisie ;  
    
-   (b) Créer deux curseurs appelés $\alpha$ et $v_0$ correspondant respectivement à l’angle de lancer et la vitesse initiale fournie à la pierre. (largeur des curseurs : 400) ;  
+      b. Créer deux curseurs appelés $\alpha$ et $v_0$ correspondant respectivement à l’angle de lancer et la vitesse initiale fournie à la pierre. (largeur des curseurs : 400) ;  
    
-   (c) Entrer l’équation obtenue en 2 dans la ligne de saisie et régler le zoom pour n’afficher que la partie de la courbe qui est au-dessus de l’axe des abscisses.  
+      c. Entrer l’équation obtenue en 2 dans la ligne de saisie et régler le zoom pour n’afficher que la partie de la courbe qui est au-dessus de l’axe des abscisses.  
 
-![logo](meca_SL.png "graphique"){ loading=lazy }
+![logo](meca_SL.png "graphique")
 
+5. Influence de l’angle initial  
+       a. On fixe une vitesse initiale de 15 $ m.s^{-1}$. Tracer les trajectoires correspondant à des angles de lancer de 30°, 40°, 45°, 55°;  
+   
+      b.  L’angle initial a -t-il une influence sur la distance ?  
+   
+      c. On suppose la pierre lancée avec une vitesse initiale de 10 $m.s^{-1}$. Sous quel angle la lancer pour qu’elle aille le plus loin possible ? Le plus haut possible ?  
 
+6. Influence des autres paramètres  
+   1. Comment déterminer l’influence de la vitesse initiale ?  
+   
+   2. D’après les équations, la masse a-t-elle une influence ?  
+   
+   3. D’après les équations, la force a-t-elle une influence ?  
 
-1. Influence de l’angle initial  
+7. Des trajectoires particulières  
    
-   (a) On fixe une vitesse initiale de 15 $ m.s^{-1}$. Tracer les trajectoires correspondant à des angles de lancer de 30°, 40°, 45°, 55°;  
+   1. Tracer les trajectoires correspondant à des angles de lancer de 30°et de 60°, avec une même vitesse initiale de 15 $m.s^{-1}$ ;  
    
-   (b) L’angle initial a -t-il une influence sur la distance ?  
+   2. Que remarque-t-on ?  
    
-   (c) On suppose la pierre lancée avec une vitesse initiale de 10 $m.s^{-1}$. Sous quel angle la lancer pour qu’elle aille le plus loin possible ? Le plus haut possible ?  
+   3. Et pour un angle de 20°? de 40°?  
 
-2. Influence des autres paramètres  
-   (a) Comment déterminer l’influence de la vitesse initiale ?  
-   
-   (b) D’après les équations, la masse a-t-elle une influence ?  
-   
-   (c) D’après les équations, la force a-t-elle une influence ?  
+8. Monsieur Manfin habite au troisième étage, à 9 m de hauteur. Proposer à l’aide de GeoGebra des angles et vitesses initiales permettant d’envoyer la pierre à cette hauteur.  
 
-3. Des trajectoires particulières  
-   
-   (a) Tracer les trajectoires correspondant à des angles de lancer de 30°et de 60°, avec une même vitesse initiale de 15 $m.s^{-1}$ ;  
-   
-   (b) Que remarque-t-on ?  
-   
-   (c) Et pour un angle de 20°? de 40°?  
+9. Un être humain moyen peut fournir une vitesse initiale maximale d’environ 12 m.s-1 (le record du monde étant de 14 m.s-1). Conclure quant à la plausibilité que la pierre ait été lancée de l’extérieur par la fenêtre.  
 
-4. Monsieur Manfin habite au troisième étage, à 9 m de hauteur. Proposer à l’aide de GeoGebra des angles et vitesses initiales permettant d’envoyer la pierre à cette hauteur.  
-
-5. Un être humain moyen peut fournir une vitesse initiale maximale d’environ 12 m.s-1 (le record du monde étant de 14 m.s-1). Conclure quant à la plausibilité que la pierre ait été lancée de l’extérieur par la fenêtre.  
-
-6.  Proposer des hypothèses sur la présence de la pierre retrouvées.
+10.  Proposer des hypothèses sur la présence de la pierre retrouvées.

@@ -25,6 +25,31 @@ Exemples :
 1134903170
 ```
 
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+<iframe src="https://www.geogebra.org/classic/dh5cgb4r?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+
 ### Exercice 2
 
 Les variables *liste_eleves* et *liste_notes* ayant été préalablement définies et étant de même longueur, la fonction *meilleures_notes* renvoie la note maximale qui a été attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms de ces élèves.

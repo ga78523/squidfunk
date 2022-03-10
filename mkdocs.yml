@@ -1,21 +1,36 @@
-site_name: MkLorum
-site_url: https://example.com/
+site_name: Site du LCDG
 locale: fr
 
+
 theme:
-  name: material    
+  name: material
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
 
 nav:
     - Home: index.md
     - About: about.md 
-    - SL: /SL/Balistique
-    - TNSI: TNSI/API_web_eleve.md
+    - SL: SL/SL_menu.md
+    - SNT : SNT/SNT_menu.md
+    - TNSI : TNSI/TNSI_menu.md
+    - 1NSI : 1NSI/1NSI_menu.md
 
 extra_javascript: 
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 markdown_extensions:
     - mdx_math
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true 
+
 
 
   
