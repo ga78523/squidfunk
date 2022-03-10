@@ -1,4 +1,4 @@
 # 1NSI
 
 Liste des cours:
-* Web
+* [Web](web_1NSI.md)
