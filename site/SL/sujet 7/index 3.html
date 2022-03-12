@@ -13,7 +13,7 @@
     
     
       
-        <title>1NSI - Site du LCDG</title>
+        <title>sujet 7 - Site du LCDG</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1nsi" class="md-skip">
+        <a href="#sujet-7" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1NSI
+              sujet 7
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SL/SL_menu/" class="md-nav__link">
+      <a href="../SL_menu/" class="md-nav__link">
         SL
       </a>
     </li>
@@ -276,21 +276,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../1NSI/1NSI_menu/" class="md-nav__link">
         1NSI
       </a>
-      
     </li>
   
 
@@ -315,6 +305,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -327,12 +339,73 @@
                 
 
 
-<h1 id="1nsi">1NSI</h1>
-<p>Liste des cours:</p>
-<ul>
-<li><a href="../web_1NSI/">Web</a></li>
-<li><a href="../recherche/">recherche</a> avec <a href="../recherche_correction/">correction</a> </li>
-</ul>
+<h1 id="sujet-7">sujet 7</h1>
+<h3 id="exercice-1">Exercice 1</h3>
+<p>On s’intéresse à la suite d’entiers définie par</p>
+<p>U1 = 1, U2 = 1 et, pour tout entier naturel n, par Un+2 = Un+1 + Un .</p>
+<p>Elle s’appelle la suite de Fibonnaci.</p>
+<p>Écrire la fonction <em>fibonacci</em> qui prend un entier n &gt; 0 et qui renvoie l’élément d’indice <em>n</em> de cette suite.</p>
+<p>On utilisera une programmation dynamique (pas de récursivité).</p>
+<p>Exemples :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="mi">75025</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="mi">1134903170</span>
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C</label><label for="__tabbed_1_2">C++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<iframe src="https://www.geogebra.org/classic/dh5cgb4r?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+<h3 id="exercice-2">Exercice 2</h3>
+<p>Les variables <em>liste_eleves</em> et <em>liste_notes</em> ayant été préalablement définies et étant de même longueur, la fonction <em>meilleures_notes</em> renvoie la note maximale qui a été attribuée, le nombre d’élèves ayant obtenu cette note et la liste des noms de ces élèves.</p>
+<p>Compléter le code Python de la fonction <em>meilleures_notes</em> ci-dessous.</p>
+<div class="highlight"><pre><span></span><code><span class="n">liste_eleves</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;j&#39;</span><span class="p">]</span>
+<span class="n">liste_notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">meilleures_notes</span><span class="p">():</span>
+    <span class="n">note_maxi</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">nb_eleves_note_maxi</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">liste_maxi</span> <span class="o">=</span>  <span class="o">...</span>
+
+    <span class="k">for</span> <span class="n">compteur</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">liste_notes</span><span class="p">[</span><span class="n">compteur</span><span class="p">]</span> <span class="o">==</span> <span class="o">...</span><span class="p">:</span>
+            <span class="n">nb_eleves_note_maxi</span> <span class="o">=</span> <span class="n">nb_eleves_note_maxi</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">liste_maxi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_eleves</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">liste_notes</span><span class="p">[</span><span class="n">compteur</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">note_maxi</span><span class="p">:</span>
+            <span class="n">note_maxi</span> <span class="o">=</span> <span class="n">liste_notes</span><span class="p">[</span><span class="n">compteur</span><span class="p">]</span>
+            <span class="n">nb_eleves_note_maxi</span> <span class="o">=</span> <span class="o">...</span>
+            <span class="n">liste_maxi</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">note_maxi</span><span class="p">,</span><span class="n">nb_eleves_note_maxi</span><span class="p">,</span><span class="n">liste_maxi</span><span class="p">)</span>
+</code></pre></div>
+<p>Une fois complété, le code ci-dessus donne</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">meilleures_notes</span><span class="p">()</span>
+<span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">])</span>
+</code></pre></div>
 
               
             </article>
@@ -342,26 +415,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../TNSI/TNSI_menu/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TNSI" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              TNSI
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
