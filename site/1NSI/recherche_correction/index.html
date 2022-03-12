@@ -13,7 +13,7 @@
     
     
       
-        <title>1NSI - Site du LCDG</title>
+        <title>Recherche correction - Site du LCDG</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1nsi" class="md-skip">
+        <a href="#les-algorithmes-de-recherches" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1NSI
+              Recherche correction
             
           </span>
         </div>
@@ -276,21 +276,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../1NSI_menu/" class="md-nav__link">
         1NSI
       </a>
-      
     </li>
   
 
@@ -315,6 +305,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-contexte" class="md-nav__link">
+    1) Contexte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-un-premier-algorithme" class="md-nav__link">
+    2) Un premier algorithme
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Un premier algorithme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-principe" class="md-nav__link">
+    2.1) Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-exercice" class="md-nav__link">
+    2.2) Exercice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-la-recherche-par-dichotomie" class="md-nav__link">
+    3) La recherche par dichotomie
+  </a>
+  
+    <nav class="md-nav" aria-label="3) La recherche par dichotomie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-principe" class="md-nav__link">
+    3.1) Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-exemple" class="md-nav__link">
+    3.2) Exemple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-exercice-ecrire-la-fonction" class="md-nav__link">
+    4) Exercice : écrire la fonction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-comparaison-entre-les-deux-methodes-de-recherche" class="md-nav__link">
+    5) Comparaison entre les deux méthodes de recherche
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -327,12 +400,89 @@
                 
 
 
-<h1 id="1nsi">1NSI</h1>
-<p>Liste des cours:</p>
+<hr />
+<hr />
+<h1 id="les-algorithmes-de-recherches">Les algorithmes de recherches</h1>
+<h2 id="1-contexte">1) Contexte</h2>
+<p>Considérons une liste d’étudiants participant à un examen. Les étudiants sont classés par ordre alphabétique. Un surveillant doit absolument parler à l’un des étudiants : il y a une fuite d’eau chez lui et la canalisation a lâché. Il faut qu’il rappelle les propriétaires.</p>
+<p>Prenons un autre exemple : On cherche dans un dictionnaire la page à laquelle se trouve un mot. Un dictionnaire peut être considéré comme un tableau trié.</p>
+<p>Comment faire pour trouver le mot le plus rapidement possible ?</p>
+<p>Ces deux situations se modélisent de la même façon en informatique. On a un tableau trié d’éléments et on doit trouver l’index d’un élément dans le tableau. On doit aussi éventuellement pouvoir vérifier qu’il ne figure pas dans le tableau. Ce problème de la recherche en table est un problème de base de l’informatique théorique. Il est intéressant par ce qu’il permet d’entrevoir la notion d’efficacité d’un algorithme. </p>
+<p>En résumé, le problème est le suivant :
+On considère un tableau T trié de N éléments. Comment montrer qu’un objet O se trouve dans le tableau, en précisant son index, ou ne s’y trouve pas.</p>
+<h2 id="2-un-premier-algorithme">2) Un premier algorithme</h2>
+<h3 id="21-principe">2.1) Principe</h3>
+<p>On peut procéder de façon assez naïve pour résoudre ce problème. Il suffit de parcourir le tableau en commençant par le premier élément, et de le parcourir jusqu’à ce que l’on ait trouvé O. Pour rechercher notre aiguille dans la meule de foin, on la parcourt de façon exhaustive.</p>
+<h3 id="22-exercice">2.2) Exercice</h3>
+<p>Réaliser un algorithme qui effectue cette recherche sans fonction puis avec.</p>
+<blockquote>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">L</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span> <span class="n">nbre</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;_recherche la valeur recherchée puis retourne son index</span>
+<span class="sd">    ou -1 si pas présent</span>
+<span class="sd">    Args:</span>
+<span class="sd">    L (list): _tableau_</span>
+<span class="sd">    nbre (int): _valeur recherchée_</span>
+<span class="sd">    Returns:</span>
+<span class="sd">    int: _index de la valeur rechercher_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nbre</span><span class="p">:</span>
+            <span class="n">ind</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">ind</span>
+</code></pre></div>
+</blockquote>
+<h2 id="3-la-recherche-par-dichotomie">3) La recherche par dichotomie</h2>
+<h3 id="31-principe">3.1) Principe</h3>
+<p>Cette méthode s’apparente à la méthode "diviser pour mieux régner". On compare le nombre recherché au nombre qui se trouve au centre du tableau :</p>
 <ul>
-<li><a href="../web_1NSI/">Web</a></li>
-<li><a href="../recherche/">recherche</a> avec <a href="../recherche_correction/">correction</a> </li>
+<li>
+<p>Si le nombre recherché est égal au nombre qui se trouve au centre du tableau, c’est terminé.</p>
+</li>
+<li>
+<p>Si le nombre recherché est inférieur au nombre qui se trouve au centre du tableau, on recommence sur la première moitié du tableau.</p>
+</li>
+<li>
+<p>Si le nombre recherché est supérieur au nombre qui se trouve au centre du tableau, on recommence sur la deuxième moitié du tableau.</p>
+</li>
+<li></li>
 </ul>
+<h3 id="32-exemple">3.2) Exemple</h3>
+<p>Supposons que le nombre recherché soit égal à 3 :</p>
+<p>Étape 1 : 1 2 3 4 5 6 7 8 9
+  Le nombre au centre du tableau est 5. Puisque 3 est inférieur à 5, on recherche dans la 1ère moitié du tableau
+  Étape 2 : 1 2 3 4 5 :
+  Le nombre au centre du tableau est 3, il est égal au nombre recherché, c’est terminé.</p>
+<h2 id="4-exercice-ecrire-la-fonction">4) Exercice : écrire la fonction</h2>
+<p>Écrire la fonction rechercheDicho qui effectue la recherche par dichotomie. Montrer la terminaison de la recherche dichotomique à l’aide d’un variant de boucle.</p>
+<blockquote>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche_dicho</span><span class="p">(</span><span class="n">L</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span> <span class="n">valeur_recherchee</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;_recherche par dichotomie_</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        L (list): _description_</span>
+<span class="sd">        valeur_recherchee (int): _description_</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: _si oui ou non la valeur recherchée est présente dans la liste L_</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">index_deb</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">index_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="n">trouve</span> <span class="o">==</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">index_deb</span> <span class="o">&lt;</span> <span class="n">index_fin</span><span class="p">:</span>
+        <span class="n">index_milieu</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_deb</span> <span class="o">+</span> <span class="n">index_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+        <span class="k">if</span> <span class="n">L</span><span class="p">[</span><span class="n">index_milieu</span><span class="p">]</span> <span class="o">==</span> <span class="n">valeur_recherchee</span><span class="p">:</span>
+            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">valeur_recherchee</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">[</span><span class="n">index_milieu</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">index_fin</span> <span class="o">=</span> <span class="n">index_milieu</span><span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="n">index_deb</span> <span class="o">=</span> <span class="n">index_milieu</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">trouve</span><span class="p">,</span><span class="n">index_milieu</span>
+</code></pre></div>
+</blockquote>
+<h2 id="5-comparaison-entre-les-deux-methodes-de-recherche">5) Comparaison entre les deux méthodes de recherche</h2>
+<p>Tester le temps mis par ces deux algorithmes pour rechercher une valeur sur un liste de 10,100,1000 éléments. Faites en la représentation graphique. Évaluer la complexité de ces deux algorithmes</p>
 
               
             </article>
@@ -342,26 +492,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../TNSI/TNSI_menu/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TNSI" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              TNSI
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
